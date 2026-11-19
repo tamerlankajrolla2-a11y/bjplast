@@ -37,7 +37,7 @@ ru: {
  okh: 'Заявка отправлена', okt: 'Мы свяжемся с вами в рабочее время. Если удобнее, напишите сразу в WhatsApp.', okt2: 'Мы получили расчёт и свяжемся с вами, чтобы договориться о замере.',
  ft: 'Астана и Косшы', set: 'Настройки', call: 'Позвонить', calcS: 'Расчёт',
  oh: 'Отправить расчёт', ob: 'Отправить заявку', close: 'Закрыть', waGo: 'Написать в WhatsApp',
- theme: 'Оформление', thA: 'Авто', thL: 'Светлое', thD: 'Тёмное', lang: 'Язык',
+ theme: 'Оформление', thA: 'Авто', thL: 'Светлое', thD: 'Тёмное', thB: 'Синее', lang: 'Язык',
  pr1: 'Хотите похожий сайт для бизнеса?', pr2: 'Сделаю такой же сайт для вашего бизнеса — с калькулятором, заявками и WhatsApp.',
  errPhone: 'Укажите телефон, чтобы мы могли с вами связаться.', failH: 'Заявка не ушла', fail: 'Нет связи с сервером. Напишите нам в WhatsApp — данные уже в сообщении.',
  sending: 'Отправляю…',
@@ -85,7 +85,7 @@ kk: {
  okh: 'Өтінім жіберілді', okt: 'Жұмыс уақытында хабарласамыз. Ыңғайлы болса, бірден WhatsApp-қа жазыңыз.', okt2: 'Есебіңізді алдық, өлшеу уақытын келісу үшін хабарласамыз.',
  ft: 'Астана және Қосшы', set: 'Баптаулар', call: 'Қоңырау', calcS: 'Есептеу',
  oh: 'Есепті жіберу', ob: 'Өтінімді жіберу', close: 'Жабу', waGo: 'WhatsApp-қа жазу',
- theme: 'Безендіру', thA: 'Авто', thL: 'Жарық', thD: 'Қараңғы', lang: 'Тіл',
+ theme: 'Безендіру', thA: 'Авто', thL: 'Жарық', thD: 'Қараңғы', thB: 'Көк', lang: 'Тіл',
  pr1: 'Бизнесіңізге осындай сайт керек пе?', pr2: 'Бизнесіңізге де осындай сайт жасап беремін — калькулятормен, өтініммен және WhatsApp-пен.',
  errPhone: 'Сізбен байланысуымыз үшін телефон нөмірін жазыңыз.', failH: 'Өтінім жіберілмеді', fail: 'Серверге байланыс жоқ. WhatsApp-қа жазыңыз — деректер хабарламада дайын.',
  sending: 'Жіберілуде…',
@@ -414,7 +414,7 @@ function setTheme(m) {
 }
 $$('[data-lang]').forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); }); });
 $$('#th button').forEach(function (b) { b.onclick = function () { setTheme(b.getAttribute('data-th')); }; });
-setTheme(store('bj-theme') || 'auto');
+setTheme((['auto','light','dark','blue'].indexOf(store('bj-theme')) > -1 ? store('bj-theme') : 'auto'));
 
 function renderHero() {
   $('#heroDraw').innerHTML = drawSVG({ kind: 'window', W: 1500, H: 1400, n: 2, open: ['fix', 'tt'], color: '#F4F6F8', scene: true, heroAnim: true, label: t('cap') });

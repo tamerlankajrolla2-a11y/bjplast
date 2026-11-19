@@ -6,7 +6,7 @@
 <title>BJ PLAST — окна, двери, витражи и тамбуры в Астане | замер бесплатно</title>
 <meta name="description" content="BJ PLAST: изготовление и установка пластиковых и алюминиевых окон, балконов, входных дверей, тамбуров и перегородок в Астане и Косшы. Рассчитайте стоимость онлайн, замер бесплатно. Рейтинг 5,0 в 2ГИС.">
 <meta name="theme-color" content="#F3F6F9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0A1A2C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0B0C0E" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://bjplast.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="BJ PLAST — окна и двери под ваш проём">
@@ -28,10 +28,16 @@
    COLOUR: калька (холодный белый) и чернила-тёмно-синий, синий логотипа BJ; тёмная тема — синька (blueprint).
    TYPE: Geologica — одна семья, вес и размер задают иерархию. Цифры размеров — табличные. */
 :root{color-scheme:light dark;
---paper:light-dark(#F3F6F9,#0A1A2C);--sheet:light-dark(#FFFFFF,#0F2238);--ink:light-dark(#0E2238,#E7EFF8);--mute:light-dark(#516477,#9DB1C7);
---line:light-dark(#D5DEE8,#21395A);--draft:light-dark(#8FA6BF,#6F90B6);--glass:light-dark(#DCEAF6,#17345A);--glass2:light-dark(#F1F7FC,#1E4470);
---blue:#0B6FCF;--blue-d:light-dark(#0959A8,#3D93E8);--sun:#F2B33D;--ok:#1F9D63;--err:#D64545;
---grid:light-dark(#E3EAF2,#14304E);--sky1:light-dark(#B9D7F2,#0B1D36);--bldf:light-dark(#F7FAFD,#14304E);--sunf:light-dark(#FFF1CC,#F4E7C3);--gndf:light-dark(#DCE6EF,#0F2238);--sky2:light-dark(#EEF6FC,#1D4878);--r:10px}
+--paper:light-dark(#F3F6F9,#0B0C0E);--sheet:light-dark(#FFFFFF,#16181B);--ink:light-dark(#0E2238,#ECEFF2);--mute:light-dark(#516477,#9AA1A9);
+--line:light-dark(#D5DEE8,#2A2D32);--draft:light-dark(#8FA6BF,#7C858F);--glass:light-dark(#DCEAF6,#1A232D);--glass2:light-dark(#F1F7FC,#243342);
+--blue:#0B6FCF;--blue-d:light-dark(#0959A8,#4DA3F2);--sun:#F2B33D;--ok:#1F9D63;--err:#D64545;
+--grid:light-dark(#E3EAF2,#17191C);--sky1:light-dark(#B9D7F2,#0D1218);--bldf:light-dark(#F7FAFD,#1C1F23);--sunf:light-dark(#FFF1CC,#F4E7C3);--gndf:light-dark(#DCE6EF,#131518);--sky2:light-dark(#EEF6FC,#1A2633);--r:10px;
+--navy:#0A1A2C;--navy-ink:#E7EFF8;--navy-mute:#9DB1C7;--navy-line:#21395A;--navy-grid:#102642;--navy-map:#0F2238;--navy-bd:#2B4A70}
+/* чёрная тема: тёмная по умолчанию (системная и ручная) */
+:root[data-theme=dark]{--navy:#111214;--navy-ink:#ECEFF2;--navy-mute:#9AA1A9;--navy-line:#2A2D32;--navy-grid:#1B1D20;--navy-map:#16181B;--navy-bd:#34383E}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--navy:#111214;--navy-ink:#ECEFF2;--navy-mute:#9AA1A9;--navy-line:#2A2D32;--navy-grid:#1B1D20;--navy-map:#16181B;--navy-bd:#34383E}}
+/* синяя тема (синька) */
+:root[data-theme=blue]{color-scheme:dark;--paper:#0A1A2C;--sheet:#0F2238;--ink:#E7EFF8;--mute:#9DB1C7;--line:#21395A;--draft:#6F90B6;--glass:#17345A;--glass2:#1E4470;--blue-d:#3D93E8;--grid:#14304E;--sky1:#0B1D36;--bldf:#14304E;--sunf:#F4E7C3;--gndf:#0F2238;--sky2:#1D4878}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 [hidden]{display:none!important}
@@ -99,11 +105,11 @@ nav.mn a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,trans
 .dw .op{stroke:var(--ink);stroke-width:1.1;stroke-dasharray:9 6;fill:none;vector-effect:non-scaling-stroke;opacity:.75}
 .dw .hd2{fill:var(--ink)}
 .dw .wall{fill:url(#hatch)}
-.dw .bld{fill:light-dark(#F7FAFD,#14304E);stroke:var(--draft);stroke-width:1;vector-effect:non-scaling-stroke}
+.dw .bld{fill:var(--bldf);stroke:var(--draft);stroke-width:1;vector-effect:non-scaling-stroke}
 .dw .bln{stroke:var(--draft);stroke-width:.8;fill:none;opacity:.6;vector-effect:non-scaling-stroke}
 .dw .gold{fill:var(--sun);stroke:#C98A12;stroke-width:1;vector-effect:non-scaling-stroke}
-.dw .sun{fill:light-dark(#FFF4D6,#F4E7C3);opacity:.9}
-.dw .gnd{fill:light-dark(#DCE6EF,#0F2238)}
+.dw .sun{fill:light-dark(#FFF4D6,var(--sunf));opacity:.9}
+.dw .gnd{fill:var(--gndf)}
 .dw .pane{cursor:pointer}
 .dw .pane:hover .gl,.dw .pane:focus-visible .gl{stroke:var(--blue);stroke-width:2.5}
 .dw .pane:focus{outline:none}
@@ -201,18 +207,18 @@ details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
 details p{padding:0 0 22px;color:var(--mute);max-width:64ch}
 
 /* контакты — синька */
-.ct{background:#0A1A2C;color:#E7EFF8;background-image:linear-gradient(#10264280 1px,transparent 1px),linear-gradient(90deg,#10264280 1px,transparent 1px);background-size:32px 32px}
-.ct .lead{color:#9DB1C7}
+.ct{background:var(--navy);color:var(--navy-ink);background-image:linear-gradient(color-mix(in srgb,var(--navy-grid) 50%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--navy-grid) 50%,transparent) 1px,transparent 1px);background-size:32px 32px}
+.ct .lead{color:var(--navy-mute)}
 .ctg{display:grid;gap:28px;margin-top:40px}
 .cl{margin:0;padding:0;list-style:none;display:grid;gap:4px}
-.cl li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid #21395A}
+.cl li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--navy-line)}
 .cl svg{color:#7FB3EA;margin-top:2px}
-.cl small{display:block;color:#9DB1C7;font-size:14px}
+.cl small{display:block;color:var(--navy-mute);font-size:14px}
 .cl a{text-decoration:none;font-weight:600;font-size:18px}
 .soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .soc a{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:9px;border:1px solid #2B4A70;text-decoration:none;font-weight:500}
 .soc a:hover{background:#ffffff10}
-.map{margin-top:22px;border-radius:4px;overflow:hidden;border:1px solid #2B4A70;aspect-ratio:16/10;background:#0F2238}
+.map{margin-top:22px;border-radius:4px;overflow:hidden;border:1px solid var(--navy-bd);aspect-ratio:16/10;background:var(--navy-map)}
 .map iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.85)}
 .form{align-self:start;background:#fff;color:#0E2238;border-radius:4px;padding:clamp(22px,3vw,32px);display:grid;gap:14px;align-content:start}
 .form h3{font-size:24px}
@@ -245,10 +251,10 @@ dialog[open]{animation:pop .22s cubic-bezier(.2,.8,.2,1)}
 .sheet .fld{color:var(--mute)}
 .sheet .fld input,.sheet .fld textarea{background:var(--paper);border-color:var(--line);color:var(--ink)}
 .seg{display:flex;gap:4px;padding:4px;background:color-mix(in srgb,var(--ink) 7%,transparent);border-radius:10px}
-.seg button{flex:1;min-height:42px;border:0;border-radius:7px;background:none;font-weight:500;cursor:pointer;color:var(--mute)}
+.seg button{flex:1;min-height:42px;padding:0 6px;font-size:15px;border:0;border-radius:7px;background:none;font-weight:500;cursor:pointer;color:var(--mute)}
 .seg button[aria-pressed=true]{background:var(--sheet);color:var(--ink);box-shadow:0 1px 3px #0e223830}
-.promo{border-radius:10px;padding:20px;background:#0A1A2C;color:#E7EFF8;display:grid;gap:8px;margin-top:6px}
-.promo p{color:#9DB1C7;font-size:15px}
+.promo{border-radius:10px;padding:20px;background:var(--navy);color:var(--navy-ink);display:grid;gap:8px;margin-top:6px}
+.promo p{color:var(--navy-mute);font-size:15px}
 .promo .ph{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
 .promo .row2{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
 .promo .btn{min-height:44px;font-size:15px}
@@ -492,7 +498,7 @@ dialog[open]{animation:pop .22s cubic-bezier(.2,.8,.2,1)}
  <button class="ib x" type="button" data-close aria-label="Закрыть"><svg class="i"><use href="#i-x"/></svg></button>
  <h3 id="dsT" data-t="set">Настройки</h3>
  <span class="lab" data-t="theme">Оформление</span>
- <div class="seg" id="th"><button type="button" data-th="auto" data-t="thA">Авто</button><button type="button" data-th="light" data-t="thL">Светлое</button><button type="button" data-th="dark" data-t="thD">Тёмное</button></div>
+ <div class="seg" id="th"><button type="button" data-th="auto" data-t="thA">Авто</button><button type="button" data-th="light" data-t="thL">Светлое</button><button type="button" data-th="dark" data-t="thD">Тёмное</button><button type="button" data-th="blue" data-t="thB">Синее</button></div>
  <span class="lab" data-t="lang">Язык</span>
  <div class="seg"><button type="button" data-lang="ru" aria-pressed="true">Русский</button><button type="button" data-lang="kk" aria-pressed="false">Қазақша</button></div>
  <div class="promo">
